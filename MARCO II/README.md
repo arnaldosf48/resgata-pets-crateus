@@ -50,12 +50,7 @@
 ---
 
 ## 5. Modelo Entidade-Relacionamento  
-![MER](mer-diagrama.png)  
-_(Inserir a imagem ou gerar com código, se necessário)_  
-Descrição das entidades e relacionamentos:  
-- **Usuário (1) — (N) Resgates**  
-- **Resgate (1) — (1) Imagem** _(opcional)_  
-
+![MER](der.png) 
 ---
 
 ## 6. Documentação Técnica  

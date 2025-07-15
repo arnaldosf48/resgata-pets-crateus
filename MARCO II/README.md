@@ -22,10 +22,7 @@
 - Estrutura implementada com tabelas:
   - `usuarios`  
   - `resgates`  
-  - `imagens` (separada, caso aplicável)  
-- Backup e persistência local ativados  
-- Relacionamentos normalizados  
-- MER disponível [aqui](#5-modelo-entidade-relacionamento)
+
 
 ---
 

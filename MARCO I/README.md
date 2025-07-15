@@ -17,7 +17,7 @@ Desenvolver um sistema tem como objetivo principal registrar, organizar e permit
 ### 2.1 Requisitos Funcionais
 
 1. **Cadastro de Resgates de Animais**  
-   - Registro com: tipo de animal, data e hora, localização, responsável, condição do animal, observações e imagem.  
+   - Registro com: tipo de animal, data e hora, localização, responsável, condição do animal, observações.  
 
 2. **Consulta e Gerenciamento de Resgates**  
    - Listagem em formato de tabela  

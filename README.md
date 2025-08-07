@@ -36,7 +36,6 @@ Facilitar o **controle, histórico e análise** dos resgates realizados, por mei
 - Edição e exclusão de registros
 - Exportação da lista de resgates para **PDF**
 - Cadastro e login de usuários
-- Exibição do nome e e-mail do usuário logado
 - Restrição de acesso para usuários autenticados
 - Logout
 
@@ -45,85 +44,101 @@ Facilitar o **controle, histórico e análise** dos resgates realizados, por mei
 - Interface gráfica simples e intuitiva
 - Armazenamento local com persistência automática
 - Compatível com Windows (opcionalmente Linux)
-- Pode ser transformado em `.exe` para instalação offline
 - Baixo consumo de recursos
 
 ---
 
-## 📁 Estrutura do Projeto
+# 🐾 Resgata Pet Crateús - Guia de Execução
 
-```
-resgates_animais/
-│
-├── main.py                  # Arquivo principal
-├── db_setup.py              # Criação das tabelas no SQLite
-├── login_window.py          # Tela de login e cadastro de usuário
-├── dashboard_window.py      # Tela principal após login
-├── db.sqlite3               # Banco de dados local (gerado após o setup)
-└── README.md                # Documentação do projeto
+Este é um guia passo a passo para rodar o sistema de cadastro e gerenciamento de usuários do projeto **Resgata Pet Crateús**.
+
+---
+
+## ✅ Requisitos
+
+Antes de iniciar, é necessário ter instalado:
+
+- [Python 3.10+](https://www.python.org/downloads/)
+- Pip (gerenciador de pacotes do Python)
+
+Verifique com os comandos:
+
+```bash
+python --version
+pip --version
 ```
 
 ---
 
-## ⚙️ Como Executar
 
-1. Instale o Python 3: [https://www.python.org/downloads](https://www.python.org/downloads)
+## 📦 Passo 1 - Instalar dependências
 
-2. Instale as dependências:
+Execute no terminal:
 
 ```bash
-pip install fpdf
+pip install pillow fpdf matplotlib
 ```
 
-3. Crie o banco de dados local (roda apenas uma vez):
+---
+
+## Passo 2 Clonando o Repositório
+
+Abra o terminal e execute:
+
+```sh
+git clone https://github.com/arnaldosf48/resgata-pets-crateus.git
+cd resgata-pets-crateus
+```
+
+### Estrutura esperada do projeto
+
+Os arquivos estarao organizados da seguinte forma:
+
+```
+resgata-pet-crateus/
+│
+├── src/
+│   ├── main.py
+│   ├── login_window.py
+│   ├── dashboard_window.py
+│   ├── db_setup.py
+│   └── ... outros arquivos
+│
+└── db.sqlite3   ← banco de dados SQLite
+```
+
+---
+
+## Passo 3 - Criar o banco de dados (se ainda não existir)
+
+Crie o arquivo `db.sqlite3` executando o `db_setup.py` ou pelo terminal:
 
 ```bash
+cd src
 python db_setup.py
 ```
 
-4. Inicie a aplicação:
+---
+
+## ▶️ Passo 4 - Rodar o sistema
+
+Acesse a pasta onde está o `main.py` e execute:
 
 ```bash
+cd src
 python main.py
 ```
 
 ---
 
-## 📦 Empacotamento como Executável (Windows)
+## Problemas comuns
 
-Instale o PyInstaller:
-
-```bash
-pip install pyinstaller
-```
-
-Gere o `.exe`:
-
-```bash
-pyinstaller --noconsole --onefile main.py
-```
-
-O executável será gerado em:
-
-```
-dist/main.exe
-```
+- `ModuleNotFoundError`: instale os pacotes com `pip install <nome-do-pacote>`
+- `sqlite3.OperationalError`: verifique se o banco foi criado corretamente
+- O sistema precisa ser executado em um ambiente com interface gráfica (Windows ou Linux Desktop)
 
 ---
 
-## 👥 Equipe de Desenvolvimento
+## Observação
 
-- **Arnaldo Filho** – Analista e Desenvolvedor
-- [Adicionar demais membros se houver]
-
----
-
-## 🐛 Suporte e Feedback
-
-Caso encontre erros ou tenha sugestões, entre em contato com a equipe ou abra uma issue no repositório.
-
----
-
-## 📄 Licença
-
-Este projeto é de uso acadêmico e sem fins lucrativos. Licença livre para fins educativos e não comerciais.
+Este projeto usa **Tkinter** como interface gráfica, além de bibliotecas externas como **Pillow**, **FPDF** e **Matplotlib**.

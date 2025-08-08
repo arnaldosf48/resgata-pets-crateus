@@ -61,14 +61,17 @@ pytest -v
 ## Casos de Teste
 
 ### Autenticação (`test_auth.py`)
-- Cadastro de usuário
-- Login de usuário
-- Validação de dados de entrada
+- `test_cadastro_usuario_sucesso`: Cadastro de usuário com sucesso.
+- `test_cadastro_email_invalido`: Não permite cadastro com e-mail inválido.
+- `test_cadastro_usuario_campos_vazios`: Não permite cadastro com campos obrigatórios vazios.
+- `test_cadastro_usuario_email_duplicado`: Não permite cadastro com e-mail já cadastrado.
+- `test_login_sucesso`: Login com dados corretos efetuado com sucesso.
+- `test_login_credenciais_invalidas`: Não permite login com credenciais incorretas.
 
 ### Resgates (`test_resgates.py`)
-- Registro de novo resgate
-- Consulta de resgates por usuário
-- Validação dos dados do resgate
+- `test_cadastro_resgate_sucesso`: Registro de novo resgate com sucesso.
+- `test_cadastro_resgate_campos_vazios`: Não permite registro de resgate com campos obrigatórios vazios.
+- `test_buscar_resgates_usuario`: Consulta de resgates por usuário.
 
 ## Estrutura dos Testes
 Os testes seguem o padrão AAA (Arrange-Act-Assert):

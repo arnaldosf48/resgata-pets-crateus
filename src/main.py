@@ -1,4 +1,4 @@
-# main.py
+import db_setup 
 from login_window import abrir_login
 from dashboard_window import abrir_dashboard
 

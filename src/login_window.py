@@ -25,12 +25,12 @@ def abrir_login(on_success):
     root.geometry("800x400") 
     root.resizable(False, False)
 
-    # Frame esquerdo (branco)
+   
     frame_esquerdo = tk.Frame(root, bg="white", width=600, height=300)
     frame_esquerdo.pack(side="left", fill="both")
 
-    # Imagem no frame esquerdo
-    imagem_path = os.path.join(os.path.dirname(__file__), "logo.png")  # Caminho da imagem 
+    
+    imagem_path = os.path.join(os.path.dirname(__file__), "logo.png")  
 
     if os.path.exists(imagem_path):
         try:
@@ -45,11 +45,11 @@ def abrir_login(on_success):
     else:
         tk.Label(frame_esquerdo, text="Imagem 'logo.png' não encontrada.\nColoque ao lado do arquivo login_window.py", bg="white").pack(pady=20)
 
-    # Frame direito (verde)
+    
     frame_direito = tk.Frame(root, bg="#0B2B26", width=300, height=300)
     frame_direito.pack(side="right", fill="both", expand=True)
 
-    # Campos de login no frame direito
+    
     tk.Label(frame_direito, text="Email", bg="#0B2B26", fg="white").pack(pady=(40, 5))
     email_entry = tk.Entry(frame_direito, width=30)
     email_entry.pack()

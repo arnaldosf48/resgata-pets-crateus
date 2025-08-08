@@ -3,7 +3,6 @@ import sqlite3
 conn = sqlite3.connect("db.sqlite3")
 cursor = conn.cursor()
 
-# Cria a tabela de usuários (se ainda não existir)
 cursor.execute('''
 CREATE TABLE IF NOT EXISTS usuarios (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -13,7 +12,6 @@ CREATE TABLE IF NOT EXISTS usuarios (
 )
 ''')
 
-# Cria a tabela de resgates (se ainda não existir)
 cursor.execute('''
 CREATE TABLE IF NOT EXISTS resgates (
     id INTEGER PRIMARY KEY AUTOINCREMENT,

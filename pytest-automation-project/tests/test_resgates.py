@@ -79,6 +79,20 @@ class TestResgates:
         resgate = self.cursor.fetchone()
         assert resgate is not None
         assert resgate[1] == "Cachorro"
+        
+    def test_cadastro_resgate_campos_vazios(self):
+        # Arrange
+        dados_resgate = (None, None, None, None, None)
+        
+        # Act & Assert
+        with pytest.raises(sqlite3.IntegrityError) as error:
+            self.cursor.execute('''
+                INSERT INTO resgates (tipo, localizacao, responsavel, data, observacoes)
+                VALUES (?, ?, ?, ?, ?)
+            ''', dados_resgate)
+            self.conn.commit()
+        
+        assert "NOT NULL constraint failed" in str(error.value)
 
     def test_buscar_resgates_usuario(self):
         # Arrange
